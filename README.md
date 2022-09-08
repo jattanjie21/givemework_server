@@ -1,2 +1,2 @@
 # givemework_server
-Job Posting
+Job Posting Server with Django, MongoDB and Django_Graphene

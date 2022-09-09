@@ -5,9 +5,7 @@ Job Posting Server with Django, MongoDB and Django_Graphene
 
 License: MIT
 
-## Settings
 
-Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
 
 ## Basic Commands
 

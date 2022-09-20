@@ -65,18 +65,21 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.forms",
 ]
+
 THIRD_PARTY_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "graphene_django",
 ]
 
 LOCAL_APPS = [
     "core.users",
-    # Your stuff: custom apps go here
+
 ]
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -134,6 +137,12 @@ MIDDLEWARE = [
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# GRAPHENE SETTINGS
+GRAPHENE = {
+    "SCHEMA": "config.schema.schema" # Where your Graphene schema lives
+}
+
 
 # STATIC
 # ------------------------------------------------------------------------------

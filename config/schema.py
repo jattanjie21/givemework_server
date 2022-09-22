@@ -1,6 +1,11 @@
-import graphene
+from graphene import ObjectType
+from core.seeker.schema import SeekerQuery, SeekerMutation
 
-class Query(graphene.ObjectType):
+class Query(ObjectType):
     hello = graphene.String(default_value="Hi!")
 
-schema = graphene.Schema(query=Query)
+
+class Mutation(SeekerMutation,ObjectType):
+    pass
+
+schema = graphene.Schema(query=Query,mutation=Mutation)

@@ -21,3 +21,15 @@ class Individual(TimeStamp):
 
     class Meta:
         abstract = True
+
+
+class Location(models.Model):
+    region    = models.CharField(max_length=100,blank=True,null=True)
+    town      = models.CharField(max_length=100,blank=True,null=True)
+    longitude = models.FloatField(blank=True,null=True)
+    latitude  = models.FloatField(blank=True,null=True)
+    address   = models.CharField(max_length=100)
+    country   = models.CharField(max_length=200,default='Gambia')
+
+    class Meta:
+        abstract = True

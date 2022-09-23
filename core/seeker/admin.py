@@ -10,7 +10,8 @@ class SeekerAdmin(admin.ModelAdmin):
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ['start_date', 'end_date', 'institution', 'certification']
+    list_display  = ['start_date', 'end_date', 'institution', 'certification']
+    search_fields = ['institution', 'certification']
 
 
 admin.site.register(Skills)
@@ -18,7 +19,8 @@ admin.site.register(Skills)
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ['start_date', 'end_date', 'company', 'description']
+    list_display  = ['start_date', 'end_date', 'company', 'description']
+    search_fields = ['company',]
 
 
 admin.site.register(SeekerProfile)

@@ -4,10 +4,6 @@ A job posting site
 
 License: MIT
 
-## Settings
-
-Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
-
 ## Basic Commands
 
 ### Setting Up Your Users

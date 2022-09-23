@@ -58,3 +58,14 @@ INSTALLED_APPS += ["django_extensions"]  # noqa F405
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jelma',
+        'USER': 'jelmauser',
+        'PASSWORD': 'Jelma$$2022',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
+    }
+}

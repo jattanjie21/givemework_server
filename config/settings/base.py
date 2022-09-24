@@ -86,7 +86,7 @@ LOCAL_APPS = [
     "core.seeker",
     "core.employer",
     "core.jobs",
-]
+    ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -195,10 +195,7 @@ TEMPLATES = [
     }
 ]
 
-# DJANGO GRAPHENE SETUP
-GRAPHENE = {
-    "SCHEMA": "config.schema.schema"
-}
+
 
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#form-renderer
@@ -289,3 +286,8 @@ SOCIALACCOUNT_FORMS = {"signup": "core.users.forms.UserSocialSignupForm"}
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# DJANGO GRAPHENE SETUP
+GRAPHENE = {
+    "SCHEMA": "config.schema.schema",
+}

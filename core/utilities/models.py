@@ -10,7 +10,7 @@ class TimeStamp(models.Model):
         abstract = True
 
 
-class Individual(TimeStamp):
+class Individual(models.Model):
     first_name    = models.CharField(max_length=255)
     middle_name   = models.CharField(max_length=255, blank=True, null=True)
     last_name     = models.CharField(max_length=255)

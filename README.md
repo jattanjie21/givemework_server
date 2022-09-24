@@ -8,7 +8,7 @@ License: MIT
 
 ## Database Setup
 The project uses postgres version-14 and a local instance was created for testing locally during
-and post development. Find the guide in [postgres_setup](https://github.com/gambiaparticipates/gp-website/blob/main/setup_guides/postres_setup_guide.md)
+and post development. Find the guide in [postgres_setup](https://github.com/jawneh/givemework_server/blob/main/setup_guides/postres_setup_guide.md)
 
 ### Setting Up Your Users
 

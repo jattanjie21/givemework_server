@@ -6,6 +6,10 @@ License: MIT
 
 ## Basic Commands
 
+## Database Setup
+The project uses postgres version-14 and a local instance was created for testing locally during
+and post development. Find the guide in [postgres_setup](https://github.com/gambiaparticipates/gp-website/blob/main/setup_guides/postres_setup_guide.md)
+
 ### Setting Up Your Users
 
 -   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.

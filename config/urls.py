@@ -20,3 +20,8 @@ if settings.DEBUG:
         import debug_toolbar
 
         urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+
+
+admin.site.site_header  =  "Jelma Server"
+admin.site.site_title  =  "Jelma Server admin site"
+admin.site.index_title  =  "Jelma Server Admin"

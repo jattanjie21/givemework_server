@@ -1,5 +1,6 @@
 from graphene_django import DjangoObjectType
 from seeker.models import *
+from employer.models import *
 
 
 class SeekerType(DjangoObjectType):
@@ -25,3 +26,13 @@ class ExperienceType(DjangoObjectType):
 class SeekerProfileType(DjangoObjectType):
     class Meta:
         model = SeekerProfile
+
+
+class EmployerType(DjangoObjectType):
+    class Meta:
+        model = Employer
+
+
+class HiringType(DjangoObjectType):
+    class Meta:
+        model = Hiring

@@ -233,3 +233,63 @@ class DeleteExperience(Mutation):
 # region seeker profile mutations
 
 # endregion seeker profile mutations
+
+
+# region employer mutations
+class CreateEmployer(Mutation):
+    class Arguments:
+        organization_name    = String(required=True)
+        organization_contact = Int(required=True)
+        organization_email   = String(required=True)
+        organization_address = String(required=True)
+
+    employer = Field(EmployerType)
+
+    def mutate(self,info, organization_name,organization_contact,organization_email,organization_address):
+        employer = Employer(
+            organization_name    = organization_name,
+            organization_contact = organization_contact,
+            organization_email   = organization_email,
+            organization_address = organization_address
+            )
+        employer.save()
+        return CreateEmployer(employer=employer)
+
+
+class UpdateEmployer(Mutation):
+    class Arguments:
+        id                   = Int(required=True)
+        organization_name    = String(required=False)
+        organization_contact = Int(required=False)
+        organization_email   = String(required=False)
+        organization_address = String(required=False)
+
+    employer = Field(EmployerType)
+
+    def mutate(self,info, id, organization_name,organization_contact,organization_email,organization_address):
+        employer = Employer.objects.get(id=id)
+
+        employer.organization_name    = organization_name
+        employer.organization_contact = organization_contact
+        employer.organization_email   = organization_email
+        employer.organization_address = organization_address
+
+        employer.save()
+        return UpdateEmployer(employer=employer)
+
+
+class DeleteEmployer(Mutation):
+    class Arguments:
+        id = Int(required=True)
+
+    employer = Field(EmployerType)
+    success = Boolean()
+
+    def mutate(self,info, id):
+        employer = Employer.objects.get(id=id)
+        employer.delete()
+        return DeleteEmployer(employer=employer, success=True)
+# endregion employer mutations
+
+# region hiring mutations
+# endregion hiring mutations
